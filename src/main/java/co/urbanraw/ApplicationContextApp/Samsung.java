@@ -1,10 +1,14 @@
 package co.urbanraw.ApplicationContextApp;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
 
+@Component
 public class Samsung {
 
 	@Autowired
+	@Qualifier("mediaTek")//We can call Qualifier if we dont use Primary in MediaTek or in Snapdragon
 	MobileProccesor cpu;
 	
 	public MobileProccesor getCpu() {
